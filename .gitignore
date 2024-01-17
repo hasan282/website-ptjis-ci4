@@ -1,3 +1,6 @@
+#-------------------------
+# Operating Specific Junk Files
+#-------------------------
 
 # OS X
 .DS_Store
@@ -33,12 +36,18 @@ $RECYCLE.BIN/
 # Linux trash folder which might appear on any partition or disk
 .Trash-*
 
+#-------------------------
 # Environment Files
-.envhosting
+#-------------------------
+# These should never be under version control,
+# as it poses a security risk.
+.env
 .vagrant
 Vagrantfile
 
+#-------------------------
 # Temporary Files
+#-------------------------
 writable/cache/*
 !writable/cache/index.html
 
@@ -52,23 +61,34 @@ writable/uploads/*
 !writable/uploads/index.html
 
 writable/debugbar/*
+!writable/debugbar/.gitkeep
 
 php_errors.log
 
+#-------------------------
 # User Guide Temp Files
+#-------------------------
 user_guide_src/build/*
 user_guide_src/cilexer/build/*
 user_guide_src/cilexer/dist/*
 user_guide_src/cilexer/pycilexer.egg-info/*
 
+#-------------------------
 # Test Files
+#-------------------------
 tests/coverage*
 
 # Don't save phpunit under version control.
 phpunit
 
+#-------------------------
 # Composer
+#-------------------------
 vendor/
+
+#-------------------------
+# IDE / Development Files
+#-------------------------
 
 # Modules Testing
 _modules/*
@@ -105,3 +125,4 @@ nb-configuration.xml
 /results/
 /phpunit*.xml
 /.phpunit.*.cache
+

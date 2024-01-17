@@ -1,17 +1,5 @@
 <?php
 
-$myConfiguration = [
-
-    // jadikan 'true' jika aplikasi di folder hosting
-    'production_server' => false,
-
-    // nama folder tempat spark dan app yang ada di root
-    'app_foldername' => 'app_suretybond'
-
-]; // ubah myConfiguration pada spark juga
-
-define('MOVETO_HOSTING', $myConfiguration['production_server']);
-
 // Check PHP version.
 $minPhpVersion = '7.4'; // If you update this, don't forget to update `spark`.
 if (version_compare(PHP_VERSION, $minPhpVersion, '<')) {
@@ -20,6 +8,7 @@ if (version_compare(PHP_VERSION, $minPhpVersion, '<')) {
         $minPhpVersion,
         PHP_VERSION
     );
+
     exit($message);
 }
 
@@ -42,14 +31,7 @@ if (getcwd() . DIRECTORY_SEPARATOR !== FCPATH) {
 
 // Load our paths config file
 // This is the line that might need to be changed, depending on your folder structure.
-
-// require FCPATH . '../app/Config/Paths.php';
-if (MOVETO_HOSTING) {
-    require FCPATH . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . $myConfiguration['app_foldername'] . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'Config' . DIRECTORY_SEPARATOR . 'Paths.php';
-} else {
-    require FCPATH . '..' . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'Config' . DIRECTORY_SEPARATOR . 'Paths.php';
-}
-
+require FCPATH . '../app/Config/Paths.php';
 // ^^^ Change this line if you move your application folder
 
 $paths = new Config\Paths();
@@ -62,7 +44,7 @@ require_once SYSTEMPATH . 'Config/DotEnv.php';
 (new CodeIgniter\Config\DotEnv(ROOTPATH))->load();
 
 // Define ENVIRONMENT
-if (!defined('ENVIRONMENT')) {
+if (! defined('ENVIRONMENT')) {
     define('ENVIRONMENT', env('CI_ENVIRONMENT', 'production'));
 }
 
