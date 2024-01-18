@@ -2,6 +2,8 @@
 
 CI_ENVIRONMENT = development
 
+app.baseURL = 'http://localhost:8080/'
+
 database.default.hostname = localhost
 database.default.database = ptjis_website
 database.default.username = root
