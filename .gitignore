@@ -1,7 +1,7 @@
 #-------------------------
 
-public/presento/*
-!public/presento/index.html
+public/plugins/*
+!public/plugins/index.html
 
 #-------------------------
 
