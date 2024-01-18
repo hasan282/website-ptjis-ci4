@@ -7,31 +7,33 @@
 $navbarMenu = array(
     ['text' => 'Home',     'url' => ''],
     ['text' => 'About',    'url' => 'about',   'down' => array(
-        ['text' => 'Tentang Kami',    'url' => 'about/us'],
+        ['text' => 'Tentang Kami',    'url' => 'about/about-us'],
         ['text' => 'Sejarah',         'url' => 'about/histories'],
         ['text' => 'Visi dan Misi',   'url' => 'about/visi-misi'],
         ['text' => 'Pengalaman Kami', 'url' => 'about/experience'],
         ['text' => 'Mitra dan Klien', 'url' => 'about/mitra-client']
     )],
     ['text' => 'Services', 'url' => 'service', 'down' => array(
-        ['text' => 'Our Services', 'url' => 'service/'],
-        ['text' => 'Financial Lines', 'url' => 'service/'],
-        ['text' => 'General Insurance', 'url' => 'service/'],
-        ['text' => 'Surety Bond', 'url' => 'service/'],
-        ['text' => 'Bank Garansi', 'url' => 'service/'],
-        ['text' => 'Asuransi Kredit', 'url' => 'service/'],
-        ['text' => 'Property All Risk', 'url' => 'service/'],
-        ['text' => 'Contractor All Risk', 'url' => 'service/'],
-        ['text' => 'General Liability', 'url' => 'service/'],
-        ['text' => 'Motor Vehicle', 'url' => 'service/'],
-        ['text' => 'Health Insurance', 'url' => 'service/'],
-        ['text' => 'Personal Accident', 'url' => 'service/'],
-        ['text' => 'Marine Cargo', 'url' => 'service/'],
-        ['text' => 'Marine Hull', 'url' => 'service/'],
-        ['text' => 'Aviation', 'url' => 'service/'],
-        ['text' => 'Kredit Multi Guna', 'url' => 'service/'],
-        ['text' => 'Asuransi Uang', 'url' => 'service/'],
-        ['text' => 'Alat Berat', 'url' => 'service/'],
+        ['text' => 'Our Services',      'url' => 'service/'],
+        ['text' => 'Financial Lines',   'url' => 'service/', 'down' => array(
+            ['text' => 'Surety Bond',     'url' => 'service/'],
+            ['text' => 'Bank Garansi',    'url' => 'service/'],
+            ['text' => 'Asuransi Kredit', 'url' => 'service/']
+        )],
+        ['text' => 'General Insurance', 'url' => 'service/', 'down' => array(
+            ['text' => 'Property All Risk',   'url' => 'service/'],
+            ['text' => 'Contractor All Risk', 'url' => 'service/'],
+            ['text' => 'General Liability',   'url' => 'service/'],
+            ['text' => 'Motor Vehicle',       'url' => 'service/'],
+            ['text' => 'Health Insurance',    'url' => 'service/'],
+            ['text' => 'Personal Accident',   'url' => 'service/'],
+            ['text' => 'Marine Cargo',        'url' => 'service/'],
+            ['text' => 'Marine Hull',         'url' => 'service/'],
+            ['text' => 'Aviation',            'url' => 'service/'],
+            ['text' => 'Kredit Multi Guna',   'url' => 'service/'],
+            ['text' => 'Asuransi Uang',       'url' => 'service/'],
+            ['text' => 'Alat Berat',          'url' => 'service/']
+        )]
     )],
     ['text' => 'Team',     'url' => 'team',    'down' => array(
         ['text' => 'Manajemen',   'url' => 'team/manajemen'],
@@ -155,6 +157,8 @@ $navbarMenu = array(
     </div>
 </footer>
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+</a>
 
 <?= $this->endSection(); ?>

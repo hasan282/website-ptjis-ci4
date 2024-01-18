@@ -4,10 +4,10 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class Home extends BaseController
+class About extends BaseController
 {
     public function index(): string
     {
-        return $this->view('home/index');
+        return $this->view('layout/blank');
     }
 }

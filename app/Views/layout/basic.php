@@ -37,7 +37,7 @@
     <script src="/presento/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- <script src="/presento/plugin/"></script> -->
 
-    <script src="/presento/js/main.js"></script>
+    <script src="/presento/js/main.min.js"></script>
 
 </body>
 
